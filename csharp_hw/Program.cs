@@ -1,4 +1,85 @@
-﻿// ДЗ к семинару № 3
+﻿// ДЗ к семинару № 1
+
+// Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, 
+// какое число большее, а какое меньшее.
+// a = 5; b = 7 -> max = 7
+// a = 2 b = 10 -> max = 10
+// a = -9 b = -3 -> max = -3
+
+// Console.Write("Введите первое число: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите второе число: ");
+// int num2 = Convert.ToInt32(Console.ReadLine());
+// if (num1 > num2)
+//     Console.WriteLine("max = " +num1);
+// else if (num1 == num2)
+//     Console.WriteLine("Вы ввели одинаковые числа");
+// else
+//     Console.WriteLine("max = " +num2);
+
+
+
+// Задача 4: Напишите программу, которая принимает на вход три числа и 
+// выдаёт максимальное из этих чисел.
+// 2, 3, 7 -> 7
+// 44 5 78 -> 78
+// 22 3 9 -> 22
+
+
+// Console.Write("Введите первое число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Ведите второе число: ");
+// int b = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите третье число: ");
+// int c = Convert.ToInt32(Console.ReadLine());
+// int max = a;
+// if (b > max) max = b;
+// if (c > max) max = c;
+// Console.WriteLine("max = " +max);
+
+
+
+// Задача 6: Напишите программу, которая на вход принимает число и выдаёт, 
+// является ли число чётным (делится ли оно на два без остатка).
+// 4 -> да
+// -3 -> нет
+// 7 -> нет
+
+
+// Console.Write("Введите целое число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// if (num % 2 == 0)
+//     Console.WriteLine("Число четное");
+// else 
+//     Console.WriteLine("Число нечетное");
+
+
+
+
+// Задача 8: Напишите программу, которая на вход принимает число (N), 
+// на выходе показывает все чётные числа от 1 до N.
+// 5 -> 2, 4
+// 8 -> 2, 4, 6, 8
+
+
+// Console.Write("Введите целое положительное число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int n1 = 1;
+// while (n1 <= n)
+// {
+//     if (n1 % 2 == 0)
+//     {
+//         Console.Write(n1 + " ");
+//     }
+//     n1 = n1 + 1;
+// }
+
+
+// ДЗ к семинару № 2
+
+
+
+// ДЗ к семинару № 3
 
 // Задача 19
 // Напишите программу, которая принимает на вход пятизначное число и проверяет, 
@@ -264,4 +345,46 @@ double[] myArray = FillArray(length);
 PrintArray(myArray);
 double result = FindRasn(myArray);
 Console.WriteLine($"Разница между макс и мин элементами массива = {result:F2}");
+*/
+
+
+
+// ДЗ к семинару № 6
+
+// Задача 41: Пользователь вводит с клавиатуры M чисел. 
+// Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// 0, 7, 8, -2, -2 -> 2
+// 1, -7, 567, 89, 223-> 3
+
+/*
+Console.Write("Сколько чисел будете вводить? ");
+int n = Convert.ToInt32(Console.ReadLine());
+int count = 0;
+for(int i = 0; i < n; i++)
+{
+    Console.Write("Введите целое число: ");
+    int num = Convert.ToInt32(Console.ReadLine());
+    if(num > 0)  count++;
+}
+Console.WriteLine($"Вы ввели {count} положительных чисел");
+*/
+
+
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
+// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; 
+// значения b1, k1, b2 и k2 задаются пользователем.
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+/*
+Console.Write("Введите k1: ");
+double k1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите b1: ");
+double b1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите k2: ");
+double k2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите b2: ");
+double b2 = Convert.ToInt32(Console.ReadLine());
+double x = (b2 - b1)/(k1 - k2);
+double y = k1*x + b1;
+Console.WriteLine($"Точка пересечения ({x};{y})");
 */
