@@ -522,3 +522,170 @@ FillArray(array);
 PrintArray(array);
 Summa(array);
 */
+
+
+// ДЗ № 8
+
+// Задача 54: Задайте двумерный массив. Напишите программу, 
+// которая упорядочит по убыванию элементы каждой строки двумерного массива.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// В итоге получается вот такой массив:
+// 7 4 2 1
+// 9 5 3 2
+// 8 4 4 2
+
+/* Не рабочая хрень!?
+
+void FillArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+        for (int j = 0; j < array.GetLength(1); j++)
+            array[i, j] = new Random().Next(-9, 10);
+}
+
+void PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write($"{array[i, j],2}  ");
+        Console.WriteLine();
+    }
+}
+
+void NewArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int k = 0; k < array.GetLength(1) - 1; k++)
+            {
+                if (array[i, k] < array[i, k + 1])
+                {
+                    int temp = array[i, k + 1];
+                    array[i, k + 1] = array[i, k];
+                    array[i, k] = temp;
+                }
+            }
+            Console.Write(array[i, j]);
+        }
+        Console.WriteLine();
+    }
+}
+
+Console.Write("Введите количество строк: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+int[,] array = new int[rows, columns];
+FillArray(array);
+PrintArray(array);
+Console.WriteLine();
+NewArray(array);
+*/
+
+
+// Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, 
+// которая будет находить строку с наименьшей суммой элементов.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// 5 2 6 7
+// Программа считает сумму элементов в каждой строке и выдаёт 
+// номер строки с наименьшей суммой элементов: 1 строка
+
+
+
+// Задача 58: Задайте две матрицы. Напишите программу, 
+// которая будет находить произведение двух матриц.
+// Например, даны 2 матрицы:
+// 2 4 | 3 4
+// 3 2 | 3 3
+// Результирующая матрица будет:
+// 18 20
+// 15 18
+
+
+// Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел.
+// Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+// Массив размером 2 x 2 x 2
+// 66(0,0,0) 25(0,1,0)
+// 34(1,0,0) 41(1,1,0)
+// 27(0,0,1) 90(0,1,1)
+// 26(1,0,1) 55(1,1,1)
+
+
+// Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
+// Например, на выходе получается вот такой массив:
+// 01 02 03 04
+// 12 13 14 05
+// 11 16 15 06
+// 10 09 08 07
+
+
+
+// ДЗ к семинару № 9
+
+// Задача 64: Задайте значение N. Напишите программу, которая выведет 
+// все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
+// N = 5 -> "5, 4, 3, 2, 1"
+// N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
+
+/*
+void Finish(int n)
+{
+    if (n == 0) return;
+    Console.Write(n + " ");
+    Finish(n - 1);
+}
+
+Console.Write("Введите положительное число n: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Finish(n);
+*/
+
+
+// Задача 66: Задайте значения M и N. Напишите программу, 
+// которая найдёт сумму натуральных элементов в промежутке от M до N.
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
+
+/*
+int Summa(int m, int n)
+{
+    if(m==n) return n;
+    else return m + Summa(m+1,n);
+}
+
+Console.Write("Введите положительное число m: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите положительное число n: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.Write($"Сумма натуральных элементов от m до n: {Summa(m,n)}");
+*/
+
+
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. 
+// Даны два неотрицательных числа m и n.
+// m = 2, n = 3 -> A(m,n) = 9
+// m = 3, n = 2 -> A(m,n) = 29
+
+/*
+int akkerman(int m, int n)
+{
+    if (m == 0) return n + 1;
+    else if (n == 0) return akkerman(m - 1, 1);
+    else return akkerman(m - 1, akkerman(m, n - 1));
+}
+
+Console.Write("Введите положительное число m: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите положительное число n: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.Write($"Функция Аккермана:{akkerman(m,n)}");
+*/
